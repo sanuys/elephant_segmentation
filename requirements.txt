@@ -1,0 +1,27 @@
+# Python dependencies for the elephant_segmentation workshop project
+# Install with:  pip install -r requirements.txt
+#
+# Covers:
+#  - 01_generate_ground_truth.py   (YOLOv8x-seg detection + rembg/U2-Net fallback)
+#  - elephant_segmentation_workshop.ipynb          (classical segmentation + morphology + evaluation)
+#  - elephant_segmentation_workshop_TH.ipynb       (same notebook, Thai-translated)
+
+# --- core numerical / image processing ---
+numpy>=1.24
+opencv-python>=4.8
+scipy>=1.10
+pandas>=2.0
+Pillow>=10.0
+
+# --- plotting (used throughout the notebooks) ---
+matplotlib>=3.7
+
+# --- ground-truth generation (01_generate_ground_truth.py) ---
+ultralytics>=8.2          # YOLOv8x-seg (also pulls in torch/torchvision automatically)
+rembg>=2.0.55             # U2-Net saliency fallback for images with 0 YOLO detections
+onnxruntime>=1.16         # inference backend required by rembg
+
+# --- running the .ipynb notebooks ---
+jupyter>=1.0
+ipykernel>=6.25
+nbformat>=5.9
